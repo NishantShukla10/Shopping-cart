@@ -1,40 +1,45 @@
-
-import {MdDelete} from "react-icons/md"
+import { MdDelete } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { remove } from "../redux/Slices/CartSlice";
 import { toast } from "react-hot-toast";
 
-const CartItem = ({item, itemIndex}) => {
+const CartItem = ({ item }) => {
   const dispatch = useDispatch();
 
   const removeFromCart = () => {
     dispatch(remove(item.id));
     toast.error("Item Removed");
-  }
+  };
 
   return (
-    <div className="" >
-
-      <div className="flex  gap-3  mt-8">
-
-        <div className="h-[180px] w-[140px]  " >
-          <img src={item.image} className="h-full w-full" />
+    <div className="border-b pb-4">
+      <div className="flex flex-col md:flex-row gap-4">
+        {/* Image */}
+        <div className="h-[180px] w-full md:w-[140px] flex-shrink-0">
+          <img src={item.image} className="h-full w-full object-contain" alt={item.title} />
         </div>
-        <div className="flex flex-col gap-4 w-[23rem] ml-6">
-          <h1 className="font-bold text-lg opacity-80">{item.title} </h1>
-          <h1 className="text-sm opacity-75"
-          >{item.description.split(" ").slice(0, 15).join(" ") + "..."}</h1>
-          <div className="flex justify-evenly">
-            <p className=" text-green-600 font-semibold items-center w-full mt-5 ">${item.price}</p>
-            <div className="bg-red-300 h-[35px] w-[40px]  grid place-content-center rounded-[50%] cursor-pointer mt-3"
-            onClick={removeFromCart}>
-              <MdDelete/>
-            </div>
+
+        {/* Details */}
+        <div className="flex flex-col justify-between w-full">
+          <div>
+            <h1 className="font-bold text-lg opacity-90">{item.title}</h1>
+            <p className="text-sm opacity-75 mt-1">
+              {item.description.split(" ").slice(0, 15).join(" ") + "..."}
+            </p>
+          </div>
+
+          <div className="flex justify-between items-center mt-4">
+            <p className="text-green-600 font-semibold text-lg">${item.price}</p>
+            <button
+              className="bg-red-300 p-2 rounded-full hover:bg-red-400"
+              onClick={removeFromCart}
+              aria-label="Remove Item"
+            >
+              <MdDelete />
+            </button>
           </div>
         </div>
       </div>
-      <div className="w-[600px] h-[1px] bg-black mt-4"></div>
-
     </div>
   );
 };
