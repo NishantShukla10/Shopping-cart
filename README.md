@@ -24,8 +24,8 @@ Check out the live version of this project here:
 
 1. Clone the repository  
    ```bash
-   git clone https://github.com/your-username/shopping-cart.git
-   cd shopping-cart
+   git clone https://github.com/NishantShukla10/Shopping-cart.git
+   cd Shopping-cart
 
 2. Install dependencies
    ```bash
