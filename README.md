@@ -1,6 +1,6 @@
 # Shopping Cart APP  
 
-A modern online shopping cart built with **ReactJS** and **Redux Toolkit**, designed to provide a smooth and enjoyable shopping experience.  
+A modern online shopping cart built with **ReactJS**, **Redux Toolkit** and **Tailwind CSS**, designed to provide a smooth and enjoyable shopping experience.  
 
 ## ✨ Features  
 - 🛍️ Browse products with a clean and responsive UI  
@@ -9,10 +9,9 @@ A modern online shopping cart built with **ReactJS** and **Redux Toolkit**, desi
 - 🔔 Beautiful notifications using **React Toastify / React Hot Toast**  
 - 🔗 Smooth navigation with **React Router DOM**  
 - ⚡ Fast and responsive design powered by **Tailwind CSS**  
-- 🧪 Tested with **React Testing Library** for reliability  
 
 ## 🚀 Tech Stack  
-- **Frontend:** React 18, JavaScript, React Router DOM  
+- **Frontend:** React
 - **State Management:** Redux Toolkit 
 - **Styling:** Tailwind CSS
 - **UI Enhancements:** React Icons, React Toastify, React Hot Toast
